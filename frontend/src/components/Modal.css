@@ -1,0 +1,149 @@
+/* ======================================
+   Modal Overlay
+   ====================================== */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+    animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ======================================
+   Modal Container
+   ====================================== */
+
+.modal-container {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    animation: slideUp 0.2s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ======================================
+   Modal Header
+   ====================================== */
+
+.modal-header {
+    padding: 20px 24px 0;
+}
+
+.modal-title {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* ======================================
+   Modal Body
+   ====================================== */
+
+.modal-body {
+    padding: 12px 24px 24px;
+}
+
+.modal-message {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ======================================
+   Modal Actions
+   ====================================== */
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    padding: 16px 24px;
+    background: var(--bg-main);
+    border-top: 1px solid var(--border);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.modal-btn {
+    flex: 1;
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.modal-btn-cancel {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+}
+
+.modal-btn-cancel:hover {
+    background: var(--bg-main);
+    border-color: #CBD5E1;
+    color: var(--text-primary);
+}
+
+.modal-btn-confirm {
+    background: var(--primary);
+    border: none;
+    color: white;
+}
+
+.modal-btn-confirm:hover {
+    background: var(--primary-hover);
+}
+
+.modal-btn-danger {
+    background: #DC2626;
+}
+
+.modal-btn-danger:hover {
+    background: #B91C1C;
+}
+
+/* ======================================
+   Responsive
+   ====================================== */
+
+@media (max-width: 480px) {
+    .modal-container {
+        max-width: 100%;
+    }
+
+    .modal-actions {
+        flex-direction: column-reverse;
+        gap: 8px;
+    }
+}

@@ -1,0 +1,157 @@
+/* ======================================
+   App Layout & Structure
+   ====================================== */
+
+.app {
+    min-height: 100vh;
+    background-color: var(--bg-main);
+    background-image: url('/bg-image.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+
+.app::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(248, 250, 252, 0.7);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.app-container {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+}
+
+/* ======================================
+   Header
+   ====================================== */
+
+.app-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.app-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-title-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary) 0%, #8B5CF6 100%);
+    border-radius: 10px;
+    color: white;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.app-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+/* ======================================
+   Error Message
+   ====================================== */
+
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: rgba(254, 242, 242, 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid #FECACA;
+    border-radius: var(--radius-md);
+    margin-bottom: 24px;
+    font-size: 0.875rem;
+    color: #991B1B;
+}
+
+.error-message span {
+    flex: 1;
+}
+
+.error-message button {
+    padding: 6px 12px;
+    background: transparent;
+    border: 1px solid #FECACA;
+    border-radius: var(--radius-sm);
+    color: #991B1B;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.error-message button:hover {
+    background: #FEE2E2;
+}
+
+/* ======================================
+   Footer
+   ====================================== */
+
+.app-footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(226, 232, 240, 0.6);
+    text-align: center;
+}
+
+.app-footer p {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+}
+
+.app-footer a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.app-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ======================================
+   Responsive
+   ====================================== */
+
+@media (max-width: 640px) {
+    .app-container {
+        padding: 32px 16px 48px;
+    }
+
+    .app-title {
+        font-size: 1.5rem;
+    }
+
+    .app-title-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    .app-subtitle {
+        font-size: 0.875rem;
+    }
+}
