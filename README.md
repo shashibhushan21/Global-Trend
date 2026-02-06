@@ -183,9 +183,17 @@ The application is fully responsive and works on:
 
 ---
 
-## 👨‍💻 Author
+## Author
 
-Built with ❤️ for **Global Trend Full Stack Development Internship**
+**Shashi Bhushan Kumar**  
+Full Stack Developer
+
+| | |
+|---|---|
+| Portfolio | [shashibhushan.me](https://shashibhushan.me) |
+| GitHub | [github.com/shashibhushan21](https://github.com/shashibhushan21) |
+| LinkedIn | [linkedin.com/in/shashi-tech](https://linkedin.com/in/shashi-tech) |
+| Location | Bhubaneswar, Odisha, India |
 
 ---
 
